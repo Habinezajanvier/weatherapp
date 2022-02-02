@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({ setValue, value, submit }) => {
+const Header = ({ setValue, value, submit, loading }) => {
   return (
     <div className="header">
       <div className="header_content">
@@ -12,9 +12,12 @@ const Header = ({ setValue, value, submit }) => {
               value={value}
               placeholder="City name"
               onChange={(e) => setValue(e.target.value)}
+              disabled={loading}
             />
           </label>
-          <button>Submit</button>
+          <button>
+            {loading ? 'Loading...' : 'Submit'}
+          </button>
         </form>
       </div>
     </div>
