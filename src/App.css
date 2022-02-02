@@ -10,8 +10,32 @@
 }
 
 .header h1 {
-  margin: 0 auto;
   color: #fff;
+}
+
+.header_content {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+}
+
+form label {
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+form input {
+  margin-top: 0.3rem;
+  padding: 0.4rem;
+}
+
+form button {
+  padding: 0.4rem;
+  font-size: 10pt;
 }
 
 main {
@@ -30,6 +54,9 @@ main > div {
   main > div {
     width: 85vw;
   }
+  .header_content {
+    width: 85vw;
+  }
 }
 
 .upperContent {
@@ -43,6 +70,9 @@ main > div {
   padding: 1rem;
   border-radius: 1.3rem;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .weatherContent {

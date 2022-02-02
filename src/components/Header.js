@@ -1,9 +1,22 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ setValue, value, submit }) => {
   return (
     <div className="header">
-      <h1>Weather App</h1>
+      <div className="header_content">
+        <h1>Weather App</h1>
+        <form noValidate onSubmit={submit}>
+          <label>
+            <p>Enter your City name</p>
+            <input
+              value={value}
+              placeholder="City name"
+              onChange={(e) => setValue(e.target.value)}
+            />
+          </label>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   );
 };
