@@ -8,15 +8,15 @@ const WeatherContent = ({ content }) => {
         <div className="timeZone">
           <div>
             <h3>Day</h3>
-            <p>{moment(content.dt).format('dddd')}</p>
+            <p>{moment().format('dddd')}</p>
           </div>
           <div>
             <h3>Date</h3>
-            <p>{moment(content.dt).format('MMM Do YY')}</p>
+            <p>{moment().format('MMM Do YY')}</p>
           </div>
           <div>
             <h3>Time</h3>
-            <p>{moment(content.dt).format('LTS')}</p>
+            <p>{moment().format('LTS')}</p>
           </div>
           {/* <div>
             <h3>T.Z</h3>

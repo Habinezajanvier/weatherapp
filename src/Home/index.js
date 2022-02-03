@@ -14,11 +14,14 @@ const HomePage = () => {
       .then((res) => {
         setLoading(false);
         setValue('');
-        setContent(res.data);
+        res.error ? alert(res.error) : setContent(res.data);
       })
       .catch((err) => {
         setLoading(false);
-        alert(err.response?.data);
+        alert(
+          err.response?.data ||
+            'Something went wrong, try again later'
+        );
       });
   };
   return (
